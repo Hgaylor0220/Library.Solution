@@ -8,10 +8,11 @@
 {
     <h3> No books in the Library!</h3>
 }
-
-@foreach (Book book in Model)
-{
- <li> @book.Title , @book.Author </li>    
-}
+<ul>
+    @foreach (Book book in Model)
+    {
+    <li> @Html.ActionLink($"{book.Title}", "Details", new {id = book.BookId}) </li>    
+    }
+</ul>
 
 <p>@Html.ActionLink("Add new Book", "Create")</p>

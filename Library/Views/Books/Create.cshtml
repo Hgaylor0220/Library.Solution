@@ -8,33 +8,36 @@
 
 @using (Html.BeginForm())
 {
+    <div class="form-group">
+
     @Html.LabelFor(model =>model.Author)
-    @Html.TextBoxFor(model => model.Author)
+    @Html.TextBoxFor(model => model.Author, new { @class = "form-control" })
 
     @Html.LabelFor(model =>model.Title)
-    @Html.TextBoxFor(model => model.Title)
+    @Html.TextBoxFor(model => model.Title, new { @class = "form-control" })
 
     @Html.LabelFor(model =>model.Year)
-    @Html.TextBoxFor(model => model.Year)
+    @Html.TextBoxFor(model => model.Year, new { @class = "form-control" })
 
     @Html.LabelFor(model =>model.ISBN)
-    @Html.TextBoxFor(model => model.ISBN)
+    @Html.TextBoxFor(model => model.ISBN, new { @class = "form-control" })
 
     @Html.LabelFor(model =>model.Genre)
-    @Html.TextBoxFor(model => model.Genre)
+    @Html.TextBoxFor(model => model.Genre, new { @class = "form-control" })
 
     @Html.LabelFor(model =>model.Type)
-    @Html.TextBoxFor(model => model.Type)
+    @Html.TextBoxFor(model => model.Type, new { @class = "form-control" })
 
     @Html.LabelFor(model =>model.Checkout)
-    @Html.TextBoxFor(model => model.Checkout)
+    @Html.TextBoxFor(model => model.Checkout, new { @class = "form-control" })
 
     @Html.LabelFor(model =>model.Location)
-    @Html.TextBoxFor(model => model.Location)
+    @Html.TextBoxFor(model => model.Location, new { @class = "form-control" })
 
-    @Html.LabelFor(model =>model.BookId)
-    @Html.TextBoxFor(model => model.BookId)
+    @Html.LabelFor(model =>model.BookId, new {@class = "hidden"})
+    @Html.TextBoxFor(model => model.BookId, new {@class = "hidden"})
+    </div>
 
-    <input type="submit" value="Add new Book!" />
+    <input class="btn btn-danger"type="submit" value="Add new Book!" />
 }
 

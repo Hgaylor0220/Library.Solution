@@ -8,9 +8,9 @@ namespace Library.Models
         public int ISBN {get; set;}
         public string Genre {get; set;}
         public string Type {get; set;}
-        public bool CheckedOut {get;set;}
+        public bool Checkout {get;set;}
         public string Location {get;set;}
-        public int BookId {get;}
+        public int BookId {get;set;}
     }
     
 } 

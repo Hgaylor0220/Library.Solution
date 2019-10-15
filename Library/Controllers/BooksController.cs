@@ -5,11 +5,11 @@ using System.Linq;
 
 namespace Library.Controllers
 {
-    public class  BooksController : Controller
+    public class BooksController : Controller
     {
         private readonly LibraryContext _db;
 
-        public  BooksController (LibraryContext db)
+        public BooksController(LibraryContext db)
         {
             _db = db;
         }
@@ -30,6 +30,11 @@ namespace Library.Controllers
             _db.Books.Add(book);
             _db.SaveChanges();
             return RedirectToAction("Index");
+        }
+        public ActionResult Details(int id)
+        {
+            Book thisBook = _db.Books.FirstOrDefault(books => books.BookId == id);
+            return View(thisBook);
         }
     }
 
