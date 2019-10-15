@@ -29,7 +29,7 @@
     @Html.TextBoxFor(model => model.Type, new { @class = "form-control" })
 
     @Html.LabelFor(model =>model.Checkout)
-    @Html.TextBoxFor(model => model.Checkout, new { @class = "form-control" })
+    @Html.CheckBoxFor(model => model.Checkout, new { @class = "form-control", @checked = "false"})
 
     @Html.LabelFor(model =>model.Location)
     @Html.TextBoxFor(model => model.Location, new { @class = "form-control" })
