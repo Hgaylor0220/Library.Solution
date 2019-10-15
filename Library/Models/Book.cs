@@ -10,7 +10,9 @@ namespace Library.Models
         public string Type {get; set;}
         public bool Checkout {get;set;}
         public string Location {get;set;}
+        public int MyRating {get; set;}
         public int BookId {get;set;}
     }
+
     
 } 

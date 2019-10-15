@@ -34,9 +34,13 @@
     @Html.LabelFor(model =>model.Location)
     @Html.TextBoxFor(model => model.Location, new { @class = "form-control" })
 
+    @Html.LabelFor(model =>model.MyRating)
+    @Html.TextBoxFor(model => model.MyRating, new { @class = "form-control" })
+
     @Html.LabelFor(model =>model.BookId, new {@class = "hidden"})
     @Html.TextBoxFor(model => model.BookId, new {@class = "hidden"})
     </div>
+
 
     <input class="btn btn-danger"type="submit" value="Add new Book!" />
 }

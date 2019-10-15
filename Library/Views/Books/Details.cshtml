@@ -5,6 +5,12 @@
 @model Library.Models.Book
 
 <h2>Book Details</h2>
-<hr />
-<h3>@Html.DisplayNameFor(model => model.Title): @Html.DisplayFor(model => model.Title)<h3>
+
+<h3>@Html.DisplayNameFor(model => model.Title): @Html.DisplayFor(model => model.Title)</h3>
+<h5>@Html.DisplayNameFor(model => model.Author): @Html.DisplayFor(model => model.Author)</h5>
+<h5>@Html.DisplayNameFor(model => model.Genre): @Html.DisplayFor(model => model.Genre)</h5>
+<h5>@Html.DisplayNameFor(model => model.Type): @Html.DisplayFor(model => model.Type)</h5>
+<h5>@Html.DisplayNameFor(model => model.Year): @Html.DisplayFor(model => model.Year)</h5>
+<h5>@Html.DisplayNameFor(model => model.MyRating): @Html.DisplayFor(model => model.MyRating)</h5>
+
 <p>@Html.ActionLink("Back to list", "Index")</p>
