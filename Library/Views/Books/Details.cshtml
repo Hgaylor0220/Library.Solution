@@ -14,4 +14,4 @@
 <h5>@Html.DisplayNameFor(model => model.MyRating): @Html.DisplayFor(model => model.MyRating)</h5>
 
 <p>@Html.ActionLink("Back to list", "Index")</p>
-<p>@Html.ActionLink("Edit book", "Edit")</p>
+<p>@Html.ActionLink("Edit book", "Edit", new { id = Model.BookId})</p>

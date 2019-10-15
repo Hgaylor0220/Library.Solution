@@ -2,7 +2,8 @@ using Microsoft.AspNetCore.Mvc;
 using Library.Models;
 using System.Collections.Generic;
 using System.Linq;
-
+using Microsoft.EntityFrameworkCore;
+using System;
 namespace Library.Controllers
 {
     public class BooksController : Controller
@@ -37,19 +38,21 @@ namespace Library.Controllers
             Book thisBook = _db.Books.FirstOrDefault(books => books.BookId == id);
             return View(thisBook);
         }
-
+        [HttpGet]
         public ActionResult Edit(int id)
         {
+            Console.WriteLine(id);
             Book thisBook = _db.Books.FirstOrDefault(books => books.BookId == id);
-            if (thisBook != null)
-            {
-                return View(thisBook);
-            }
-            else
-            {
-                return View(thisBook);
-            }
+            
+            return View(thisBook);
+        }
 
+        [HttpPost]
+        public ActionResult Edit(Book book)
+        {
+            _db.Entry(book).State = EntityState.Modified;
+            _db.SaveChanges();
+            return RedirectToAction("Index");
         }
 
     }
