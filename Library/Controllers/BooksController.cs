@@ -19,6 +19,7 @@ namespace Library.Controllers
             return View(model);
         }
 
+        [HttpGet("/Create")]
         public ActionResult Create()
         {
             return View();
@@ -36,6 +37,21 @@ namespace Library.Controllers
             Book thisBook = _db.Books.FirstOrDefault(books => books.BookId == id);
             return View(thisBook);
         }
+
+        public ActionResult Edit(int id)
+        {
+            Book thisBook = _db.Books.FirstOrDefault(books => books.BookId == id);
+            if (thisBook != null)
+            {
+                return View(thisBook);
+            }
+            else
+            {
+                return View(thisBook);
+            }
+
+        }
+
     }
 
 }
