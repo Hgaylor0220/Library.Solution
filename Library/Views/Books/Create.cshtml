@@ -1,0 +1,40 @@
+@{
+    Layout = "_Layout";
+}
+
+@model Library.Models.Book
+
+<h4>Add and New Book to your collection</h4>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model =>model.Author)
+    @Html.TextBoxFor(model => model.Author)
+
+    @Html.LabelFor(model =>model.Title)
+    @Html.TextBoxFor(model => model.Title)
+
+    @Html.LabelFor(model =>model.Year)
+    @Html.TextBoxFor(model => model.Year)
+
+    @Html.LabelFor(model =>model.ISBN)
+    @Html.TextBoxFor(model => model.ISBN)
+
+    @Html.LabelFor(model =>model.Genre)
+    @Html.TextBoxFor(model => model.Genre)
+
+    @Html.LabelFor(model =>model.Type)
+    @Html.TextBoxFor(model => model.Type)
+
+    @Html.LabelFor(model =>model.Checkout)
+    @Html.TextBoxFor(model => model.Checkout)
+
+    @Html.LabelFor(model =>model.Location)
+    @Html.TextBoxFor(model => model.Location)
+
+    @Html.LabelFor(model =>model.BookId)
+    @Html.TextBoxFor(model => model.BookId)
+
+    <input type="submit" value="Add new Book!" />
+}
+
