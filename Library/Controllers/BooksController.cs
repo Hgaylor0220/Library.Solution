@@ -20,7 +20,6 @@ namespace Library.Controllers
             return View(model);
         }
 
-        [HttpGet("/Create")]
         public ActionResult Create()
         {
             return View();
